@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Dashboard from "./components/Dashboard";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
  
 
@@ -20,7 +22,15 @@ const handleSelectedItem = (item: string) => { console.log(item); };
 
   return <div>
     {visibleALert && <Alert onClose={()=> isVisibleAlert(false)}>baf</Alert>}
-    <Button color="primary" onClick={()=> isVisibleAlert(true)} >My Button</Button> 
+   
+
+    <BrowserRouter>
+       <Routes>
+         <Route path="/" element={<Button color="primary" onClick={()=> isVisibleAlert(true)} >My Button</Button>} /> 
+         <Route path="/dashboard" element={<Dashboard />} /> 
+       </Routes>
+    </BrowserRouter>
+
     </div>
 
 }

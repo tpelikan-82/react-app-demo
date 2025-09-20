@@ -1,10 +1,11 @@
-interface Props {
+// interface Props {
 
-    onSelectCategory: (employee) => void;
+//     onSelectCategory: (employee) => void;
 
-}
+// }
 
-function NavBar({onSelectCategory}: Props) {
+// function NavBar({onSelectCategory}: Props) {
+function NavBar() {
 
     return (
         <>
@@ -36,6 +37,11 @@ function NavBar({onSelectCategory}: Props) {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/dashboard">
                                         Dashboard
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/add_employee">
+                                        Add Employee
                                     </a>
                                 </li>
                             </ul>

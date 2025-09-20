@@ -5,6 +5,7 @@ import Button from "./components/Button";
 import Dashboard from "./components/Dashboard";
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AddEmployee from "./components/AddEmployee";
 
  
 
@@ -21,9 +22,9 @@ const handleSelectedItem = (item: string) => { console.log(item); };
 
   const [visibleALert, isVisibleAlert] = useState(false);
 
-  const handleEmployeeSelect = (employee) => {
-    return;
-  };
+  // const handleEmployeeSelect = (employee) => {
+  //   return;
+  // };
   
 
 
@@ -32,10 +33,13 @@ const handleSelectedItem = (item: string) => { console.log(item); };
    
 
     <BrowserRouter>
-      <NavBar onSelectCategory={handleEmployeeSelect} />
+      {/* <NavBar onSelectCategory={handleEmployeeSelect} /> */}
+      <NavBar />
        <Routes>
+      
          {/* <Route path="/" element={<Button color="primary" onClick={()=> isVisibleAlert(true)} >My Button</Button>} />  */}
-         <Route path="/dashboard" element={<Dashboard />} /> 
+         <Route path="/" element={<Dashboard />} /> 
+         <Route path="/add_employee" element={<AddEmployee />} />
        </Routes>
     </BrowserRouter>
 

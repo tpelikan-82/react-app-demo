@@ -28,7 +28,9 @@ function Dashboard() {
                 }
 
                 const data: Employee[] = await response.json();
-                console.log("data: " + data[0].firstName + " " + data[0].lastName);               
+                if (data !== null && data.length > 0) {
+                    console.log("data: " + data[0].firstName + " " + data[0].lastName);        
+                }       
                 setEmployees(data);
             } catch (error) {
                 console.error("Error fetching employees data", error);

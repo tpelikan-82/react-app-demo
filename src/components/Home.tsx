@@ -4,7 +4,7 @@ import AppContext from "../Context/Context";
 import { Employee } from '../types/Employee'; 
 
 function Home() {
-      const { data, isError, refreshData } = useContext(AppContext)
+      const { data, isError, refreshData } = useContext(AppContext);
       const [employees, setEmployees] = useState<Employee[]>([]);
       const [isDataFetched, setIsDataFetched] = useState<Boolean>(false);
 
@@ -88,7 +88,7 @@ function Home() {
                                     >
 
                                           <Link
-                                                to={`/employees/${employeeId}`}
+                                                to={`/employee/${employeeId}`}
                                                 style={{ textDecoration: "none", color: "inherit" }}
                                           >
                                                 <img

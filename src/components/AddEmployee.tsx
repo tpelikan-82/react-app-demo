@@ -46,6 +46,9 @@ function AddEmployee() {
         .catch(error => {
           console.error('Error:', error);
         });
+
+        alert("Employee was successfully added");
+
     }
 
     return (

@@ -12,6 +12,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+import EmployeeDetail from "./components/EmployeeDetail";
+import UpdateEmployee from "./components/UpdateEmployee";
 
  
 
@@ -50,6 +52,8 @@ const handleSelectedItem = (item: string) => { console.log(item); };
           <Route path="/" element={<Home />} /> 
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/add_employee" element={<AddEmployee />} />
+          <Route path="/employee/:id" element={<EmployeeDetail />} />
+          <Route path="employee/update/:id" element={<UpdateEmployee />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
